@@ -1,10 +1,15 @@
 package characters.races;
 
-import characters.Character;
+import characters.Persona;
 
-public abstract class Race extends Character{
-    public Race(String name) {
-        super(name);
+public abstract class Race extends Persona {
+    protected String raceName;
+
+    public String getRaceName() {
+        return raceName;
+    }
+
+    public Race() {
         this.race = this;
     }
 }

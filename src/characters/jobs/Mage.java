@@ -1,8 +1,8 @@
 package characters.jobs;
 
 public class Mage extends Job{
-    public Mage(String name) {
-        super(name);
+    public Mage(){
+        this.jobName = "Mage";
         this.lifePoints -= 10;
         this.strengthPoints -= 10;
         this.magicPoints += 20;

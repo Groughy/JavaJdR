@@ -3,19 +3,18 @@ package characters;
 import characters.jobs.Job;
 import characters.races.Race;
 
-public abstract class Character {
+public class Persona {
     protected String name;
     protected Race race;
     protected Job job;
-    protected boolean gender;
+    protected String gender;
     protected int lifePoints;
     protected int strengthPoints;
     protected int magicPoints;
     protected int agilityPoints;
     protected int defensePoints;
 
-    public Character(String name) {
-        this.name = name;
+    public Persona() {
         this.lifePoints = 100;
         this.strengthPoints = 10;
         this.magicPoints = 10;
@@ -39,11 +38,11 @@ public abstract class Character {
         this.job = job;
     }
 
-    public boolean isGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

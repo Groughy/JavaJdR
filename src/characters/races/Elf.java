@@ -1,8 +1,8 @@
 package characters.races;
 
 public class Elf extends Race{
-    public Elf(String name) {
-        super(name);
+    public Elf() {
+        this.raceName = "Elfe";
         this.strengthPoints -= 5;
         this.magicPoints += 15;
         this.agilityPoints += 15;

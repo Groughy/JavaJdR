@@ -2,8 +2,8 @@ package characters.jobs;
 
 public class Warrior extends Job{
 
-    public Warrior(String name) {
-        super(name);
+    public Warrior() {
+        this.jobName = "Warrior";
         this.lifePoints += 20;
         this.strengthPoints += 10;
         this.magicPoints -= 10;
