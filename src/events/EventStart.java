@@ -15,8 +15,10 @@ public class EventStart extends Event{
                 System.out.println("Tu entres dans l'antre du voleur fou, sans regarder derrière toi, seul les faibles fuient devant le danger."); new EventFinale();
             case "2" :
                 new EventLookAroundStart();
+                break;
             case "3" :
                 new EventFleeFromQuest();
+                break;
             default :
                 System.out.println("Je n'ai pas compris ta réponse.");
         }

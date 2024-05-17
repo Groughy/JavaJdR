@@ -13,9 +13,11 @@ public class EventLookAroundStart extends Event{
         switch (getAnswer.nextLine()){
             case "1" -> {
                 new EventFinale();
+                break;
             }
             case "2" -> {
                 new EventFleeFromQuest();
+                break;
             }
             default -> {
                 System.out.println("Je n'ai pas compris ta réponse.");
