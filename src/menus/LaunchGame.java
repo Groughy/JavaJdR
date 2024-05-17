@@ -148,7 +148,7 @@ public class LaunchGame implements CreateCharacter{
                 askNameCharacter(character);
             }
             case "non", "no", "n" -> {
-                new EventStart();
+                new EventStart(character);
             }
             default -> {
                 System.out.println("veux-tu être le héros de ton aventure ? Oui/Non : ");

@@ -1,16 +1,24 @@
 package events;
 
+import characters.Persona;
+import java.util.Scanner;
+
 public class Event {
+    protected Scanner getAnswer = new Scanner(System.in);
     protected String description;
+    protected Persona character;
+
+    public Event(String Description) {
+        this.description = Description;
+        showDescription();
+    }
 
     public void showDescription(){
         System.out.println(this.description);
     }
-    public Event(String description){
-        this.description = description;
-        showDescription();
-    }
-    public Event(){
+
+
+    public Event(Persona character){
         this.description = "Event";
         showDescription();
     }
