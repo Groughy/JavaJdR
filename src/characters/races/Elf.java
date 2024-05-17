@@ -1,2 +1,11 @@
-package characters.races;public class Elf {
+package characters.races;
+
+public class Elf extends Race{
+    public Elf(String name) {
+        super(name);
+        this.strengthPoints -= 5;
+        this.magicPoints += 15;
+        this.agilityPoints += 15;
+        this.defensePoints += 5;
+    }
 }
