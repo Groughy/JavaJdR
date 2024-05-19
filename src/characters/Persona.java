@@ -35,6 +35,14 @@ public class Persona {
         this.defaultDefensePoints = 10;
     }
 
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+
     public int getDamage() {
         return damage;
     }
@@ -133,5 +141,29 @@ public class Persona {
 
     public void setDefensePoints(int defensePoints) {
         this.defensePoints = defensePoints;
+    }
+
+    public Helmet getHelmet() {
+        return helmet;
+    }
+
+    public Bust getArmor() {
+        return bust;
+    }
+
+    public Shield getShield() {
+        return shield;
+    }
+
+    public void setHelmet(Helmet helmet) {
+        this.helmet = helmet;
+    }
+
+    public void setBust(Bust bust) {
+        this.bust = bust;
+    }
+
+    public void setShield(Shield shield) {
+        this.shield = shield;
     }
 }

@@ -1,7 +1,9 @@
 package items.equipments.weapons;
 
+import characters.Persona;
+
 public class LongSword extends Weapon{
-    public LongSword(String name, int value, String description) {
-        super(name, value, description);
+    public LongSword(Persona character) {
+        super("Epée longue", 20, "Une épée allongée, moins maniable mais plus efficace au combat", character);
     }
 }

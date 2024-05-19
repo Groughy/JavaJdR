@@ -1,7 +1,9 @@
 package items.equipments.armors.busts;
 
+import characters.Persona;
+
 public class FlatChest extends Bust{
-    public FlatChest(String name, int value, String description) {
-        super(name, value, description);
+    public FlatChest(Persona character) {
+        super("Armure de plaque", 30, "Une armure de plaque lourde, implacable, ralentissant les mouvements du porteur", character);
     }
 }

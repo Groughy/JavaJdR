@@ -1,7 +1,9 @@
 package items.equipments.weapons;
 
+import characters.Persona;
+
 public class Bow extends Weapon{
-    public Bow(String name, int value, String description) {
-        super(name, value, description);
+    public Bow(Persona character) {
+        super("Arc", 15, "Une arme à distance, permettant de tirer des flèches sur les ennemis", character);
     }
 }

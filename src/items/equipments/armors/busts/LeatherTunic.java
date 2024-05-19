@@ -1,7 +1,9 @@
 package items.equipments.armors.busts;
 
+import characters.Persona;
+
 public class LeatherTunic extends Bust{
-    public LeatherTunic(String name, int value, String description) {
-        super(name, value, description);
+    public LeatherTunic(Persona character) {
+        super("Tunique de cuir", 10, "Une tunique en cuir léger, permettant des mouvements souples tout en protégeant le corps.", character);
     }
 }

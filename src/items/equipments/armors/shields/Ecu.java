@@ -1,10 +1,9 @@
 package items.equipments.armors.shields;
 
+import characters.Persona;
+
 public class Ecu extends Shield{
-    public Ecu(String name, int value, String description) {
-        super(name, value, description);
-    }
-    public Ecu() {
-        super("Ecu", 20, "Un bouclier suffisamment imposant pour arrêter les flèches et les coups d'épée.");
+    public Ecu(Persona character){
+        super("Ecu", 20, "Un bouclier suffisamment imposant pour arrêter les flèches et les coups d'épée.", character);
     }
 }

@@ -1,8 +1,10 @@
 package items.equipments.weapons;
 
+import characters.Persona;
+
 public class Fist extends Weapon
 {
-    public Fist(String name, int value, String description) {
-        super(name, value, description);
+    public Fist(Persona character) {
+        super("Poing", 0, "Tu n'as rien d'équiper ou alors, tu as décidé de te battre à mains nues", character);
     }
 }
