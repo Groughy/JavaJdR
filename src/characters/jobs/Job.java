@@ -16,10 +16,10 @@ public abstract class Job extends Persona {
 
     public String getCharacteristics() {
         return  "Life Points: " + this.lifePoints + "\n" +
-                "Strength Points: " + this.strengthPoints + "\n" +
-                "Magic Points: " + this.magicPoints + "\n" +
-                "Agility Points: " + this.agilityPoints + "\n" +
-                "Defense Points: " + this.defensePoints + "\n";
+                "Strength Points: " + this.defaultStrengthPoints + "\n" +
+                "Magic Points: " + this.defaultMagicPoints + "\n" +
+                "Agility Points: " + this.defaultAgilityPoints + "\n" +
+                "Defense Points: " + this.defaultDefensePoints + "\n";
     }
 
 

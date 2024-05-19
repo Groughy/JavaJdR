@@ -2,6 +2,10 @@ package characters;
 
 import characters.jobs.Job;
 import characters.races.Race;
+import items.equipments.armors.helmets.Helmet;
+import items.equipments.armors.busts.Bust;
+import items.equipments.armors.shields.Shield;
+import items.equipments.weapons.Weapon;
 
 public class Persona {
     protected String name;
@@ -9,17 +13,34 @@ public class Persona {
     protected Job job;
     protected String gender;
     protected int lifePoints;
+    protected int defaultStrengthPoints;
+    protected int defaultMagicPoints;
+    protected int defaultAgilityPoints;
+    protected int defaultDefensePoints;
     protected int strengthPoints;
     protected int magicPoints;
     protected int agilityPoints;
     protected int defensePoints;
+    protected Weapon weapon;
+    protected Helmet helmet;
+    protected Bust bust;
+    protected Shield shield;
+    protected int damage;
 
     public Persona() {
         this.lifePoints = 100;
-        this.strengthPoints = 10;
-        this.magicPoints = 10;
-        this.agilityPoints = 10;
-        this.defensePoints = 10;
+        this.defaultStrengthPoints = 10;
+        this.defaultMagicPoints = 10;
+        this.defaultAgilityPoints = 10;
+        this.defaultDefensePoints = 10;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
     }
 
     public Race getRace() {
@@ -60,6 +81,26 @@ public class Persona {
 
     public void setLifePoints(int lifePoints) {
         this.lifePoints = lifePoints;
+    }
+
+    public int getDefaultStrengthPoints() {
+        return defaultStrengthPoints;
+    }
+
+    public void setDefaultStrengthPoints(int defaultStrengthPoints) {
+        this.defaultStrengthPoints = defaultStrengthPoints;
+    }
+
+    public int getDefaultMagicPoints() {
+        return defaultMagicPoints;
+    }
+
+    public int getDefaultAgilityPoints() {
+        return defaultAgilityPoints;
+    }
+
+    public int getDefaultDefensePoints() {
+        return defaultDefensePoints;
     }
 
     public int getStrengthPoints() {

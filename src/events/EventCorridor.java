@@ -22,13 +22,10 @@ public class EventCorridor extends Event{
                 d100.roll();
                 if (d100.roll() <= character.getAgilityPoints()){
                     System.out.print("Tu te faufiles entre les pierres avec une agilité déconcertante. Tu peux avancer avec méfiance.\n");
-                    new EventFinale(character);
-                    break;
                 } else {
                     System.out.print("Tu arrives à passer, mais pas sans effort ! Tu te retrouves de l'autre côté des pierres, mais tu les as déplacées et désormais, elle bloque la sortie. Tu ne peux qu'avancer !");
-                    new EventFinale(character);
-                    break;
                 }
+                new EventFinale(character);
             }
         }
     }

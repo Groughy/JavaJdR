@@ -33,7 +33,7 @@ public class EventEntrance extends Event implements Search {
         System.out.print("Tu fouilles la pièces ...");
         Dice100 d100 = new Dice100();
         d100.roll();
-        if (d100.roll() <= character.getAgilityPoints()) {
+        if (d100.roll() <= character.getDefaultAgilityPoints()) {
             System.out.print("Tu trouves une petite clef en argent sur le sol, ainsi qu'une dague en argent sur une table. Un petit mot est attaché à la dague. Que vas-tu faire ? \n1. Prendre la clef \n2. la dague \n3. Lire le mot \n4. Ne rien faire et poursuivre ton chemin.");
             searchEntrance(character);
         }

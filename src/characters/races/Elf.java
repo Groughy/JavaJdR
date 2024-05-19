@@ -3,9 +3,9 @@ package characters.races;
 public class Elf extends Race{
     public Elf() {
         this.raceName = "Elfe";
-        this.strengthPoints -= 5;
-        this.magicPoints += 15;
-        this.agilityPoints += 15;
-        this.defensePoints += 5;
+        this.defaultStrengthPoints -= 5;
+        this.defaultMagicPoints += 15;
+        this.defaultAgilityPoints += 15;
+        this.defaultDefensePoints += 5;
     }
 }

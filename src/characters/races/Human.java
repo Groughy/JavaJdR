@@ -4,9 +4,9 @@ public class Human extends Race{
     public Human(){
         this.raceName = "Humain";
         this.lifePoints += 5;
-        this.strengthPoints += 5;
-        this.magicPoints += 5;
-        this.agilityPoints += 5;
-        this.defensePoints += 5;
+        this.defaultStrengthPoints += 5;
+        this.defaultMagicPoints += 5;
+        this.defaultAgilityPoints += 5;
+        this.defaultDefensePoints += 5;
     }
 }

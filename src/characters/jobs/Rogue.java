@@ -3,9 +3,9 @@ package characters.jobs;
 public class Rogue extends Job{
     public Rogue() {
         this.jobName = "Rogue";
-        this.strengthPoints -= 5;
-        this.magicPoints -= 5;
-        this.agilityPoints += 20;
-        this.defensePoints += 10;
+        this.defaultStrengthPoints -= 5;
+        this.defaultMagicPoints -= 5;
+        this.defaultAgilityPoints += 20;
+        this.defaultDefensePoints += 10;
     }
 }
