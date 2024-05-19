@@ -159,7 +159,7 @@ public class Persona {
         this.helmet = helmet;
     }
 
-    public void setBust(Bust bust) {
+    public void setArmor(Bust bust) {
         this.bust = bust;
     }
 

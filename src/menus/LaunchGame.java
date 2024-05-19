@@ -6,7 +6,9 @@ import characters.races.*;
 import events.EventStart;
 import items.Item;
 import items.equipments.armors.helmets.*;
+import items.equipments.armors.shields.*;
 import items.equipments.weapons.*;
+import items.equipments.armors.busts.*;
 
 import java.util.Scanner;
 
@@ -139,9 +141,7 @@ public class LaunchGame implements CreateCharacter {
     public void askToCreateEquipment(Persona character, Weapon weapon) {
         System.out.print("Veux-tu choisir ton équipement ? Oui/Non : ");
         switch (getAnswer.next().toLowerCase()) {
-            case "oui", "yes", "o", "y", "" -> {
-                this.chooseWeapon(character, weapon);
-            }
+            case "oui", "yes", "o", "y", "" -> this.chooseWeapon(character, weapon);
             case "non", "no", "n" -> {
                 System.out.print("Work in Progress");
                 askToCreateEquipment(character, weapon);
@@ -193,9 +193,7 @@ public class LaunchGame implements CreateCharacter {
         showItem(character.getWeapon());
         System.out.print("Veux-tu valider ton arme ? Oui/Non : ");
         switch (getAnswer.next().toLowerCase()) {
-            case "oui", "yes", "o", "y" -> {
-                chooseHelmet(character, character.getHelmet());
-            }
+            case "oui", "yes", "o", "y" -> chooseHelmet(character, character.getHelmet());
             case "non", "no", "n" -> {
                 System.out.println("Très bien !");
                 chooseWeapon(character, weapon);
@@ -237,20 +235,18 @@ public class LaunchGame implements CreateCharacter {
                 + "\nGenre : " + character.getGender()
                 + "\nClasse : " + character.getJob().getJobName()
                 + "\nRace : " + character.getRace().getRaceName()
-                + "Tes caractéristiques sont : \n"
+                + "\nTes caractéristiques sont : \n"
                 + character.getJob().getCharacteristics() +
-        "Voici ton équipement : ");
+                "Voici ton équipement : ");
         showInventory(character);
-        System.out.print("Veux-tu modifier ton personnage ? Oui/Non : ");
+        System.out.print("\nVeux-tu modifier ton personnage ? Oui/Non : ");
         Scanner getAnswer = new Scanner(System.in);
         switch (getAnswer.nextLine().toLowerCase()) {
             case "oui", "yes", "o", "y" -> {
                 System.out.println("Retournons voir ensemble ton personnage !");
                 askNameCharacter(character);
             }
-            case "non", "no", "n" -> {
-                new EventStart(character);
-            }
+            case "non", "no", "n" -> new EventStart(character);
             default -> {
                 System.out.println("veux-tu être le héros de ton aventure ? Oui/Non : ");
                 showCharacter(character);
@@ -277,9 +273,7 @@ public class LaunchGame implements CreateCharacter {
         showItem(character.getHelmet());
         System.out.print("Veux-tu valider ton casque ? Oui/Non : ");
         switch (getAnswer.next().toLowerCase()) {
-            case "oui", "yes", "o", "y" -> {
-                showCharacter(character);
-            }
+            case "oui", "yes", "o", "y" -> chooseArmor(character, character.getArmor());
             case "non", "no", "n" -> {
                 System.out.println("Très bien !");
                 chooseHelmet(character, helmet);
@@ -287,6 +281,89 @@ public class LaunchGame implements CreateCharacter {
             default -> {
                 System.out.println("Je n'ai pas compris ta réponse, veux-tu valider ton casque ? Oui/Non : ");
                 askToValidateHelmet(character, helmet);
+            }
+        }
+    }
+
+    @Override
+    public void chooseArmor(Persona character, Bust armor) {
+        System.out.print("Choisis ton armure : 1 - Toge de mage, 2 - Tunique de cuir, 3 - Armure de plaque");
+        switch (getAnswer.nextInt()) {
+            case 1 -> {
+                character.setArmor(new MageToga(character));
+                askToValidateArmor(character, armor);
+            }
+            case 2 -> {
+                character.setArmor(new LeatherTunic(character));
+                askToValidateArmor(character, armor);
+            }
+            case 3 -> {
+                character.setArmor(new FlatChest(character));
+                askToValidateArmor(character, armor);
+            }
+            default -> {
+                System.out.println("Je n'ai pas compris ta réponse, veux-tu choisir ton armure ? Oui/Non : ");
+                this.chooseArmor(character, armor);
+            }
+        }
+    }
+
+    @Override
+    public void askToValidateArmor(Persona character, Bust armor) {
+        showItem(character.getArmor());
+        System.out.print("Veux-tu valider ton armure ? Oui/Non : ");
+        switch (getAnswer.next().toLowerCase()) {
+            case "oui", "yes", "o", "y" -> chooseShield(character, character.getShield());
+            case "non", "no", "n" -> {
+                System.out.println("Très bien !");
+                chooseArmor(character, armor);
+            }
+            default -> {
+                System.out.println("Je n'ai pas compris ta réponse, veux-tu valider ton armure ? Oui/Non : ");
+                askToValidateArmor(character, armor);
+            }
+        }
+    }
+
+    @Override
+    public void chooseShield(Persona character, Shield shield) {
+        System.out.print("Choisis ton bouclier : 1 - Main libre, 2 - Rondache, 3 - Ecu, 4 - Pavois");
+        switch (getAnswer.nextInt()) {
+            case 1 -> {
+                character.setShield(new FreeHand(character));
+                askToValidateShield(character, shield);
+            }
+            case 2 -> {
+                character.setShield(new Rondache(character));
+                askToValidateShield(character, shield);
+            }
+            case 3 -> {
+                character.setShield(new Ecu(character));
+                askToValidateShield(character, shield);
+            }
+            case 4 -> {
+                character.setShield(new Bulwark(character));
+                askToValidateShield(character, shield);
+            }
+            default -> {
+                System.out.println("Je n'ai pas compris ta réponse, veux-tu choisir ton bouclier ? Oui/Non : ");
+                chooseShield(character, shield);
+            }
+        }
+    }
+    @Override
+    public void askToValidateShield (Persona character, Shield shield) {
+        showItem(character.getShield());
+        System.out.print("Veux-tu valider ton bouclier ? Oui/Non : ");
+        switch (getAnswer.next().toLowerCase()) {
+            case "oui", "yes", "o", "y" -> showCharacter(character);
+            case "non", "no", "n" -> {
+                System.out.println("Très bien !");
+                chooseShield(character, shield);
+            }
+            default -> {
+                System.out.println("Je n'ai pas compris ta réponse, veux-tu valider ton bouclier ? Oui/Non : ");
+                askToValidateShield(character, shield);
             }
         }
     }
