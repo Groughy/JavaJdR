@@ -1,6 +1,6 @@
 package items.equipments.armors.helmets;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class FlatHelmet extends Helmet{
     public FlatHelmet(Persona character){

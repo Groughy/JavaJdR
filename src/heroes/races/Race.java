@@ -1,6 +1,6 @@
-package characters.races;
+package heroes.races;
 
-import characters.Persona;
+import heroes.Persona;
 
 public abstract class Race extends Persona {
     protected String raceName;

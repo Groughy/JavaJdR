@@ -1,10 +1,11 @@
-package characters.races;
+package heroes.jobs;
 
-public class Ork extends Race{
-    public Ork() {
-        this.raceName = "Orc";
+public class Warrior extends Job{
+
+    public Warrior() {
+        this.jobName = "Warrior";
         this.lifePoints += 20;
-        this.defaultStrengthPoints += 20;
+        this.defaultStrengthPoints += 10;
         this.defaultMagicPoints -= 10;
         this.defaultAgilityPoints -= 5;
         this.defaultDefensePoints += 15;

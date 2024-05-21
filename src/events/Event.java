@@ -1,7 +1,8 @@
 package events;
 
-import characters.Persona;
 import java.util.Scanner;
+
+import heroes.Persona;
 
 public class Event {
     protected Scanner getAnswer = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package characters.races;
+package heroes.races;
 
 public class Human extends Race{
     public Human(){

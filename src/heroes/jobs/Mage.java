@@ -1,4 +1,4 @@
-package characters.jobs;
+package heroes.jobs;
 
 import items.equipments.armors.busts.MageToga;
 import items.equipments.armors.helmets.Tiara;

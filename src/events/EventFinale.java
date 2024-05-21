@@ -1,6 +1,6 @@
 package events;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class EventFinale extends Event{
     public EventFinale(Persona character) {

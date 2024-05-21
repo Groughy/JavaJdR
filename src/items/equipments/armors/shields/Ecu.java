@@ -1,6 +1,6 @@
 package items.equipments.armors.shields;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class Ecu extends Shield{
     public Ecu(Persona character){

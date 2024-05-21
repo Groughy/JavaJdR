@@ -1,6 +1,6 @@
 package menus;
 
-import characters.Persona;
+import heroes.Persona;
 import items.equipments.armors.busts.Bust;
 import items.equipments.armors.helmets.Helmet;
 import items.equipments.armors.shields.Shield;

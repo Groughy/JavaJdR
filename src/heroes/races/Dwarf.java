@@ -1,4 +1,4 @@
-package characters.races;
+package heroes.races;
 
 public class Dwarf extends Race{
     public Dwarf() {

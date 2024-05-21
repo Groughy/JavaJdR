@@ -1,6 +1,6 @@
-package characters.ennemies.animals;
+package heroes.ennemies.animals;
 
-import characters.ennemies.Enemy;
+import heroes.ennemies.Enemy;
 
 public abstract class Animal extends Enemy {
     public Animal(String name, int health, int strength, int defense, int agility, int magic) {

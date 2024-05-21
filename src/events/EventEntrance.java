@@ -1,8 +1,8 @@
 package events;
 
 
-import characters.Persona;
-import characters.actions.Search;
+import heroes.Persona;
+import heroes.actions.Search;
 import menus.dices.Dice100;
 
 public class EventEntrance extends Event implements Search {

@@ -1,6 +1,6 @@
 package items.equipments.armors.busts;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class ChainmailChest extends Bust{
     public ChainmailChest(Persona character) {

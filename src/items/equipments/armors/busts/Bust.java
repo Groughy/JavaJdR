@@ -1,6 +1,6 @@
 package items.equipments.armors.busts;
 
-import characters.Persona;
+import heroes.Persona;
 import items.equipments.armors.Armor;
 
 public abstract class Bust extends Armor {

@@ -1,13 +1,16 @@
-package characters;
+package heroes;
 
-import characters.ennemies.Enemy;
-import characters.jobs.Job;
-import characters.races.Race;
+import java.util.Scanner;
+
+import heroes.ennemies.Enemy;
+import heroes.jobs.Job;
+import heroes.races.Race;
 import items.equipments.armors.helmets.Helmet;
 import items.equipments.armors.busts.Bust;
 import items.equipments.armors.shields.Shield;
 import items.equipments.weapons.Weapon;
 import menus.dices.Dice100;
+import menus.dices.Dice4;
 
 public class Persona {
     protected String name;
@@ -28,6 +31,7 @@ public class Persona {
     protected Bust bust;
     protected Shield shield;
     protected int damage;
+    protected Scanner getAnswer = new Scanner(System.in);
 
     public Persona() {
         this.lifePoints = 100;
@@ -182,6 +186,38 @@ public class Persona {
         }
     }
     public void castSpell(Persona character, Enemy enemy) {
-
+        System.out.println("Quel sort voulez-vous lancer ? \1. Un sort d'attaque.\2. Un sort de soin.");
+        switch (getAnswer.nextInt()) {
+            case 1:
+                System.out.println("Vous lancez un sort d'attaque !");
+                break;
+            case 2:
+                System.out.println("Vous lancez un sort de soin !");
+                break;
+            default:
+                System.out.println("Choix invalide.");
+                break;
+        }
+    }
+    public void castDamageSpell(Persona character, Enemy enemy) {
+        System.out.print("Tu tentes d'utiliser un sort de...");
+        Dice4 newDice = new Dice4();
+        int diceRoll = newDice.roll();
+        switch (diceRoll) {
+            case 1:
+                System.out.println("Boule de feu !");
+                break;
+            case 2:
+                System.out.println("Piqure d'insecte !");
+                break;
+            case 3:
+                System.out.println("Jet d'éclair !");
+                break;
+            case 4:
+                System.out.println("Rien du tout, tu as raté ton sort !");
+            default:
+                System.out.println("Erreur !");
+                break;
+        }
     }
 }

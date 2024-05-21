@@ -1,6 +1,6 @@
 package events;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class EventFleeFromQuest extends Event{
     public EventFleeFromQuest(Persona character){

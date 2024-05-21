@@ -1,6 +1,6 @@
 package items.equipments.armors;
 
-import characters.Persona;
+import heroes.Persona;
 import items.equipments.Equipment;
 
 public abstract class Armor extends Equipment {

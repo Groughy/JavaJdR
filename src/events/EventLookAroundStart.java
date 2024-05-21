@@ -1,6 +1,6 @@
 package events;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class EventLookAroundStart extends Event{
     public EventLookAroundStart(Persona character) {

@@ -1,6 +1,6 @@
-package characters.ennemies;
+package heroes.ennemies;
 
-import characters.Persona;
+import heroes.Persona;
 
 public abstract class Enemy {
     protected String name;

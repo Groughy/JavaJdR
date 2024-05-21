@@ -1,4 +1,4 @@
-package characters.jobs;
+package heroes.jobs;
 
 public class Rogue extends Job{
     public Rogue() {

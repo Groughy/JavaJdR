@@ -1,4 +1,4 @@
-package characters.ennemies.animals;
+package heroes.ennemies.animals;
 
 public class Wolf extends Animal{
     public Wolf() {

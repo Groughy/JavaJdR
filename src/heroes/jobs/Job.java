@@ -1,6 +1,6 @@
-package characters.jobs;
+package heroes.jobs;
 
-import characters.Persona;
+import heroes.Persona;
 
 public abstract class Job extends Persona {
     protected String jobName;

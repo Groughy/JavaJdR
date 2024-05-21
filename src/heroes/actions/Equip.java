@@ -1,4 +1,4 @@
-package characters.actions;
+package heroes.actions;
 
 public interface Equip {
 }

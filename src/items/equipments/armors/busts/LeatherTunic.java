@@ -1,6 +1,6 @@
 package items.equipments.armors.busts;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class LeatherTunic extends Bust{
     public LeatherTunic(Persona character) {

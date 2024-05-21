@@ -1,6 +1,6 @@
 package items.equipments.armors.shields;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class Bulwark extends Shield{
     public Bulwark(Persona character) {

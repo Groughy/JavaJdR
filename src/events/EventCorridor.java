@@ -1,6 +1,6 @@
 package events;
 
-import characters.Persona;
+import heroes.Persona;
 import menus.dices.Dice100;
 
 public class EventCorridor extends Event{

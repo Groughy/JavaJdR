@@ -1,6 +1,6 @@
 package items.equipments.weapons;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class LongSword extends Weapon{
     public LongSword(Persona character) {

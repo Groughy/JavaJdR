@@ -1,9 +1,9 @@
 package events;
 
-import characters.Persona;
-import characters.actions.Fight;
-import characters.ennemies.Enemy;
-import characters.ennemies.animals.Wolf;
+import heroes.Persona;
+import heroes.actions.Fight;
+import heroes.ennemies.Enemy;
+import heroes.ennemies.animals.Wolf;
 
 public class EventFightWolfRoom extends Event implements Fight{
     public EventFightWolfRoom(Persona character) {
@@ -34,6 +34,9 @@ public class EventFightWolfRoom extends Event implements Fight{
             if (enemy.getHealth() > 0) {
                 enemy.attack(character);
             }
+        }
+        if (enemy.getHealth() <= 0) {
+            new EventWinWolfFight(character);
         }
     }
 

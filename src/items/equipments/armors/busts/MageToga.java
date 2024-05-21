@@ -1,6 +1,6 @@
 package items.equipments.armors.busts;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class MageToga extends Bust{
     public MageToga(Persona character) {

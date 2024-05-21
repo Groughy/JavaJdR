@@ -1,6 +1,6 @@
 package items.equipments.armors.shields;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class Rondache extends Shield{
     public Rondache(Persona character) {

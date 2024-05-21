@@ -1,6 +1,6 @@
 package events;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class EventFirstDoor extends Event{
     public EventFirstDoor(Persona character) {

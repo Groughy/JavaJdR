@@ -1,6 +1,6 @@
-package characters.actions;
+package heroes.actions;
 
-import characters.Persona;
+import heroes.Persona;
 
 public interface Search {
     void searchRoom(Persona character);

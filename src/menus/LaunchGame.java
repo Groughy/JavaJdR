@@ -1,9 +1,9 @@
 package menus;
 
-import characters.Persona;
-import characters.jobs.*;
-import characters.races.*;
 import events.EventStart;
+import heroes.Persona;
+import heroes.jobs.*;
+import heroes.races.*;
 import items.Item;
 import items.equipments.armors.helmets.*;
 import items.equipments.armors.shields.*;
@@ -287,7 +287,7 @@ public class LaunchGame implements CreateCharacter {
 
     @Override
     public void chooseArmor(Persona character, Bust armor) {
-        System.out.print("Choisis ton armure : 1 - Toge de mage, 2 - Tunique de cuir, 3 - Armure de plaque");
+        System.out.print("Choisis ton armure : 1 - Toge de mage, 2 - Tunique de cuir, 3 - Cottes de mail, 4 - Armure de plaque");
         switch (getAnswer.nextInt()) {
             case 1 -> {
                 character.setArmor(new MageToga(character));
@@ -298,6 +298,10 @@ public class LaunchGame implements CreateCharacter {
                 askToValidateArmor(character, armor);
             }
             case 3 -> {
+                character.setArmor(new ChainmailChest(character));
+                askToValidateArmor(character, armor);
+            }
+            case 4 -> {
                 character.setArmor(new FlatChest(character));
                 askToValidateArmor(character, armor);
             }

@@ -1,6 +1,6 @@
 package events;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class EventSeparatedPath extends Event{
     public EventSeparatedPath(Persona character) {

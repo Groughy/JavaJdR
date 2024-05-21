@@ -1,6 +1,6 @@
 package items.equipments.armors.shields;
 
-import characters.Persona;
+import heroes.Persona;
 
 public class FreeHand extends Shield{
     public FreeHand(Persona character){
