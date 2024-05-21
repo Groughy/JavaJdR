@@ -262,7 +262,7 @@ public class LaunchGame implements CreateCharacter {
     }
 
     public void showItem(Item weapon) {
-        System.out.println("Voici ton" + weapon + " : ");
+        System.out.println("Voici ton " + weapon.getClass().getSuperclass().getSimpleName() + " : ");
         System.out.println("Nom : " + weapon.getName());
         System.out.println("Dégâts : " + weapon.getValue());
         System.out.println("Description : " + weapon.getDescription());

@@ -112,7 +112,7 @@ public class Persona {
     }
 
     public int getStrengthPoints() {
-        return strengthPoints;
+        return strengthPoints + defaultStrengthPoints;
     }
 
     public void setStrengthPoints(int strengthPoints) {
@@ -120,7 +120,7 @@ public class Persona {
     }
 
     public int getMagicPoints() {
-        return magicPoints;
+        return magicPoints + defaultMagicPoints;
     }
 
     public void setMagicPoints(int magicPoints) {
@@ -128,7 +128,7 @@ public class Persona {
     }
 
     public int getAgilityPoints() {
-        return agilityPoints;
+        return agilityPoints + defaultAgilityPoints;
     }
 
     public void setAgilityPoints(int agilityPoints) {
@@ -136,7 +136,7 @@ public class Persona {
     }
 
     public int getDefensePoints() {
-        return defensePoints;
+        return defensePoints + defaultDefensePoints;
     }
 
     public void setDefensePoints(int defensePoints) {
