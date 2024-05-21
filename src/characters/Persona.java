@@ -1,11 +1,13 @@
 package characters;
 
+import characters.ennemies.Enemy;
 import characters.jobs.Job;
 import characters.races.Race;
 import items.equipments.armors.helmets.Helmet;
 import items.equipments.armors.busts.Bust;
 import items.equipments.armors.shields.Shield;
 import items.equipments.weapons.Weapon;
+import menus.dices.Dice100;
 
 public class Persona {
     protected String name;
@@ -165,5 +167,21 @@ public class Persona {
 
     public void setShield(Shield shield) {
         this.shield = shield;
+    }
+
+    public void attack(Persona character, Enemy enemy) {
+        System.out.print("Vous tendez votre " + character.getWeapon().getName() + " et attaquez le " + enemy.getName() + " !");
+        Dice100 dice = new Dice100();
+        int diceRoll = dice.roll();
+        if (diceRoll + character.getStrengthPoints() >= enemy.getAgility() +enemy.getDefense()){
+            int damage = character.getDamage() - enemy.getDefense();
+            enemy.setHealth(enemy.getHealth() - damage);
+            System.out.println("Vous infligez " + damage + " points de dégâts au " + enemy.getName() + " !");
+        } else {
+            System.out.println("Vous ratez votre attaque !");
+        }
+    }
+    public void castSpell(Persona character, Enemy enemy) {
+
     }
 }

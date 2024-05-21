@@ -14,7 +14,6 @@ public class EventCorridor extends Event{
             case "1" -> {
                 System.out.print("Tu pousses les pierres beaucoup trop facilement à ton goût. Mais le chemin est désormais dégagé. Tu peux avancer avec méfiance.");
                 new EventFinale(character);
-                break;
             }
             case "2" -> {
                 System.out.print("Tu tentes de te faufiler entre les pierres.");
@@ -25,7 +24,7 @@ public class EventCorridor extends Event{
                 } else {
                     System.out.print("Tu arrives à passer, mais pas sans effort ! Tu te retrouves de l'autre côté des pierres, mais tu les as déplacées et désormais, elle bloque la sortie. Tu ne peux qu'avancer !");
                 }
-                new EventFinale(character);
+                new EventSeparatedPath(character);
             }
         }
     }

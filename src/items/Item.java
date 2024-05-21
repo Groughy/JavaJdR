@@ -1,5 +1,7 @@
 package items;
 
+import characters.Persona;
+
 public abstract class Item {
     protected String name;
     protected int value;
