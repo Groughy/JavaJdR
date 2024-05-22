@@ -62,6 +62,7 @@ public class EventEntrance extends Event implements Search, ChooseMenu {
         switch (getAnswer.nextLine()) {
             case "1" -> {
                 System.out.println("Tu prends la clef en argent. Après une inspection rapide, tu peux remarquer la présence de rune sur la clef. Sans comprendre ces runes, tu la mets dans ton sac.");
+                character.setTookArgentKeyFromEntrance(true);
                 afterSearch(character);
             }
             case "2" -> {

@@ -1,6 +1,6 @@
 package menus;
 
-public class ChoicePersona {
+public abstract class ChoicePersona {
     private boolean readMessageEntrance = false;
     private boolean killedWolf = false;
     private boolean skinnedWolf = false;
@@ -9,6 +9,7 @@ public class ChoicePersona {
     private boolean tookPendantWolf = false;
     private boolean readMessageFromPendant = false;
     private boolean tookSmallKey = false;
+    private boolean tookArgentKeyFromEntrance = false;
 
     public boolean isReadMessageEntrance() {
         return readMessageEntrance;
@@ -72,5 +73,13 @@ public class ChoicePersona {
 
     public void setTookSmallKey(boolean tookSmallKey) {
         this.tookSmallKey = tookSmallKey;
+    }
+
+    public void setTookArgentKeyFromEntrance(boolean tookArgentKeyFromEntrance) {
+        this.tookArgentKeyFromEntrance = tookArgentKeyFromEntrance;
+    }
+
+    public boolean isTookArgentKeyFromEntrance() {
+        return tookArgentKeyFromEntrance;
     }
 }
