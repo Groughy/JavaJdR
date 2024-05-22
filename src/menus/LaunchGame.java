@@ -134,6 +134,7 @@ public class LaunchGame implements CreateCharacter {
                 defineJobCharacter(character);
             }
         }
+        character.setLifePoints(character.getDefaultLifePoints());
         askToCreateEquipment(character, character.getWeapon());
     }
 

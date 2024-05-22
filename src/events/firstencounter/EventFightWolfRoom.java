@@ -5,7 +5,6 @@ import heroes.Persona;
 import heroes.actions.Fight;
 import heroes.ennemies.Enemy;
 import heroes.ennemies.animals.Wolf;
-import menus.LaunchGame;
 
 public class EventFightWolfRoom extends Event implements Fight{
     public EventFightWolfRoom(Persona character) {
@@ -44,23 +43,5 @@ public class EventFightWolfRoom extends Event implements Fight{
             System.out.println("Vous avez perdu.");
             startAgain();
         }
-    }
-
-    private void startAgain() {
-        System.out.print("Voulez-vous rejouer ? (oui/non) ");
-        switch (getAnswer.next()) {
-            case "oui":
-                LaunchGame game = new LaunchGame();
-                game.startGame();
-                break;
-            case "non":
-                System.out.println("Merci d'avoir joué !");
-                break;
-            default:
-                System.out.println("Choix invalide.");
-                startAgain();
-                break;
-        }
-
     }
 }

@@ -8,6 +8,7 @@ public class ChoicePersona {
     private boolean tookCollarWolf = false;
     private boolean tookPendantWolf = false;
     private boolean readMessageFromPendant = false;
+    private boolean tookSmallKey = false;
 
     public boolean isReadMessageEntrance() {
         return readMessageEntrance;
@@ -63,5 +64,13 @@ public class ChoicePersona {
 
     public void setSkinnedWolf(boolean skinnedWolf) {
         this.skinnedWolf = skinnedWolf;
+    }
+
+    public boolean isTookSmallKey() {
+        return tookSmallKey;
+    }
+
+    public void setTookSmallKey(boolean tookSmallKey) {
+        this.tookSmallKey = tookSmallKey;
     }
 }

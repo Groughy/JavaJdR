@@ -13,12 +13,13 @@ public class EventLootWolf extends Event implements Search {
 
     @Override
     public void searchRoom(Persona character) {
-        System.out.print("Autour du cou du loup, un collier fait de chaines de mailles ainsi qu'un pendentif. En palpant le corps du loup, vous sentez la maigreur de l'animal. Mais rien qui n'attire votre attention plus que cela. Que faites-vous ? \n1. Vous prenez le collier. \2. Vous prenez juste le pendentif. \n3. Vous laissez le corps tel qu'il est. \n4. Vous décidez de dépecer le loup pour sa fourrure et le peu de viande qu'il possède.");
+        System.out.print("Autour du cou du loup, un collier fait de chaines de mailles ainsi qu'un pendentif. En palpant le corps du loup, vous sentez la maigreur de l'animal. Mais rien qui n'attire votre attention plus que cela. Que faites-vous ? \n1. Vous prenez le collier. \n2. Vous prenez juste le pendentif. \n3. Vous laissez le corps tel qu'il est. \n4. Vous décidez de dépecer le loup pour sa fourrure et le peu de viande qu'il possède.");
         switch (getAnswer.nextInt()) {
             case 1:
                 if (character.isTookCollarWolf()) {
                     System.out.print("Vous avez déjà le collier en votre possession.");
                     searchRoom(character);
+                    break;
                 }
                 new EventTakeCollar(character);
                 break;
@@ -26,6 +27,7 @@ public class EventLootWolf extends Event implements Search {
                 if (character.isTookPendantWolf()) {
                     System.out.print("Vous avez déjà le pendentif en votre possession.");
                     searchRoom(character);
+                    break;
                 }
                 new EventTakePendant(character);
                 break;

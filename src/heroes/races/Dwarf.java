@@ -3,7 +3,7 @@ package heroes.races;
 public class Dwarf extends Race{
     public Dwarf() {
         this.raceName = "Nain";
-        this.lifePoints += 25;
+        this.defaultLifePoints += 25;
         this.defaultStrengthPoints += 10;
         this.defaultMagicPoints -= 5;
         this.defaultAgilityPoints -= 15;

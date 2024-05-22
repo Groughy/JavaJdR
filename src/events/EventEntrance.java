@@ -14,7 +14,7 @@ public class EventEntrance extends Event implements Search, ChooseMenu {
 
     @Override
     public void chooseMenu(Persona character) {
-        System.out.print(" Devant toi se trouve un couloir dont l'accès est complexe et tortueux. Que fais-tu ? \n1. Avancer dans le couloir\n2. Fouiller la pièces");
+        System.out.print(" Devant toi se trouve un couloir dont l'accès est complexe et tortueux. Que fais-tu ? \n1. Avancer dans le couloir\n2. Fouiller la pièce");
         switch (getAnswer.nextLine()) {
             case "1" -> new EventCorridor(character);
             case "2" -> searchRoom(character);

@@ -14,7 +14,7 @@ public class EventSkinWolf extends Event {
             switch (getAnswer.nextLine().toLowerCase()) {
                 case "oui", "o", "yes", "y" -> {
                     System.out.print("Vous mangez la viande. Elle est dure et peu appétissante, mais vous avez faim.");
-                    character.setLifePoints(character.getLifePoints() + 5);
+                    character.setLifePoints(character.getDefaultLifePoints() + 5);
                 }
                 default -> System.out.print("Vous jetez la viande. Sa simple vision vous dégoûte.");
             }
@@ -26,7 +26,7 @@ public class EventSkinWolf extends Event {
                 switch (getAnswer.nextLine().toLowerCase()) {
                     case "oui", "o", "yes", "y" -> {
                         System.out.print("Vous mangez la viande. Elle est dure et peu appétissante, mais vous avez faim.");
-                        character.setLifePoints(character.getLifePoints() + 1);
+                        character.setLifePoints(character.getDefaultLifePoints() + 1);
                     }
                     default -> System.out.print("Vous jetez la viande. Sa simple vision vous dégoûte.");
                 }

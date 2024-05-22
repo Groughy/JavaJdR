@@ -18,6 +18,7 @@ public class Persona extends ChoicePersona{
     protected Race race;
     protected Job job;
     protected String gender;
+    protected int defaultLifePoints;
     protected int lifePoints;
     protected int defaultStrengthPoints;
     protected int defaultMagicPoints;
@@ -35,11 +36,19 @@ public class Persona extends ChoicePersona{
     protected Scanner getAnswer = new Scanner(System.in);
 
     public Persona() {
-        this.lifePoints = 100;
+        this.defaultLifePoints = 100;
         this.defaultStrengthPoints = 10;
         this.defaultMagicPoints = 10;
         this.defaultAgilityPoints = 10;
         this.defaultDefensePoints = 10;
+    }
+
+    public int getDefaultLifePoints() {
+        return defaultLifePoints;
+    }
+
+    public void setDefaultLifePoints(int defaultLifePoints) {
+        this.defaultLifePoints = defaultLifePoints;
     }
 
     public Weapon getWeapon() {

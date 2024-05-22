@@ -16,12 +16,13 @@ public class EventTakeCollar extends Event implements ChooseMenu {
         switch (getAnswer.nextInt()) {
             case 1:
                 System.out.println("Vous inspectez le collier. Il est fait de chaines de mailles et la qualité prouve qu'il n'est là que pour faire tenir le pendentif.");
+                chooseMenu(character);
                 break;
             case 2:
-                System.out.println("Vous vous approchez du loup. Il est mort. Vous ne pouvez rien faire de plus.");
+                new EventLootWolf(character);
                 break;
             case 3:
-                System.out.println("Vous sortez de la pièce.");
+                new EventLeaveWolf(character);
                 break;
             default:
                 System.out.println("Choix invalide.");
