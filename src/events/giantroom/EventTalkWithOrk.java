@@ -1,4 +1,10 @@
 package events.giantroom;
 
-public class EventTalkWithOrk {
+import events.Event;
+import heroes.Persona;
+
+public class EventTalkWithOrk extends Event{
+    public EventTalkWithOrk(Persona character) {
+        super("character");
+    }
 }
