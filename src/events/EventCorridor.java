@@ -16,7 +16,7 @@ public class EventCorridor extends Event implements ChooseMenu {
         switch (getAnswer.nextLine()){
             case "1" -> {
                 System.out.print("Tu pousses les pierres beaucoup trop facilement à ton goût. Mais le chemin est désormais dégagé. Tu peux avancer avec méfiance.");
-                new EventFinale();
+                new EventSeparatedPath(character);
             }
             case "2" -> {
                 System.out.print("Tu tentes de te faufiler entre les pierres.");

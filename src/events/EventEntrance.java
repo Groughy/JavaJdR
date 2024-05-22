@@ -41,6 +41,7 @@ public class EventEntrance extends Event implements Search, ChooseMenu {
         switch (getAnswer.nextLine()) {
             case "1" -> {
                 System.out.println("Le mot a piqué ta curiosité. Tu décides de le lire. \"Toi qui vient de pénétrer dans mon domaine, soit le bienvenue. Tu trouveras en ces lieux de nombreux dangers, combats et enigmes qui pousseront ton être à ses retranchements. Si vraiment, tu souhaites me rencontrer, pousse les rochers vers toi pour dégager le passage. \n Bon courage ! \n Signé \"Verlicious\"\"\n A la suite de cette lecture, tu ranges le mot dans tes poches.");
+                character.setReadMessageEntrance(true);
                 afterSearch(character);
             }
             case "2" -> {
@@ -65,6 +66,7 @@ public class EventEntrance extends Event implements Search, ChooseMenu {
             }
             case "2" -> {
                 System.out.print("La dague en argent devant toi est minieutieusement ouvragée. Tu la prends et la mets dans ton sac.");
+                character.setTookArgentDaggerFromEntrance(true);
                 afterSearch(character);
             }
             case "3" -> {

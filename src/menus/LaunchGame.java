@@ -247,6 +247,7 @@ public class LaunchGame implements CreateCharacter {
                 askNameCharacter(character);
             }
             case "non", "no", "n" -> new EventStart(character);
+
             default -> {
                 System.out.println("veux-tu être le héros de ton aventure ? Oui/Non : ");
                 showCharacter(character);
@@ -307,7 +308,7 @@ public class LaunchGame implements CreateCharacter {
             }
             default -> {
                 System.out.println("Je n'ai pas compris ta réponse, veux-tu choisir ton armure ? Oui/Non : ");
-                this.chooseArmor(character, armor);
+                chooseArmor(character, armor);
             }
         }
     }

@@ -1,18 +1,19 @@
 package heroes;
 
-import java.util.Scanner;
-
 import heroes.ennemies.Enemy;
 import heroes.jobs.Job;
 import heroes.races.Race;
-import items.equipments.armors.helmets.Helmet;
 import items.equipments.armors.busts.Bust;
+import items.equipments.armors.helmets.Helmet;
 import items.equipments.armors.shields.Shield;
 import items.equipments.weapons.Weapon;
+import menus.ChoicePersona;
 import menus.dices.Dice100;
 import menus.dices.Dice4;
 
-public class Persona {
+import java.util.Scanner;
+
+public class Persona extends ChoicePersona{
     protected String name;
     protected Race race;
     protected Job job;

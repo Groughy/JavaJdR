@@ -7,6 +7,7 @@ import heroes.actions.ChooseMenu;
 public class EventWinWolfFight extends Event implements ChooseMenu {
     public EventWinWolfFight(Persona character) {
         super("Vous avez vaincu le loup ! Vous pouvez fouiller le corps du loups, \nregarder la pièce autour de vous ou partir par la porte derrière le cadavre du loup.");
+        character.setKilledWolf(true);
         chooseMenu(character);
     }
 
