@@ -1,19 +1,22 @@
 package events;
 
 import heroes.Persona;
+import heroes.actions.ChooseMenu;
 import menus.dices.Dice100;
 
-public class EventCorridor extends Event{
+public class EventCorridor extends Event implements ChooseMenu {
     public EventCorridor(Persona character) {
         super("Tu es dans un couloir plus sombre que l'entrée, dû au manque de lumière. Devant toi, des pierres semblent bloquer ta progression. Que fais-tu ? \n1. Pousser les pierres \n2. Te faufiler entre les pierres \n3. Retourner à l'entrée.");
-        corridorChoice(character);
+        chooseMenu(character);
     }
-    public void corridorChoice(Persona character){
+
+    @Override
+    public void chooseMenu(Persona character) {
         System.out.print("Tu t'approches des pierres.");
         switch (getAnswer.nextLine()){
             case "1" -> {
                 System.out.print("Tu pousses les pierres beaucoup trop facilement à ton goût. Mais le chemin est désormais dégagé. Tu peux avancer avec méfiance.");
-                new EventFinale(character);
+                new EventFinale();
             }
             case "2" -> {
                 System.out.print("Tu tentes de te faufiler entre les pierres.");
@@ -27,5 +30,6 @@ public class EventCorridor extends Event{
                 new EventSeparatedPath(character);
             }
         }
+
     }
 }
