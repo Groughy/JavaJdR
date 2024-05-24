@@ -2,10 +2,6 @@ package heroes.jobs;
 
 public class Rogue extends Job{
     public Rogue() {
-        this.jobName = "Rogue";
-        this.defaultStrengthPoints -= 5;
-        this.defaultMagicPoints -= 5;
-        this.defaultAgilityPoints += 20;
-        this.defaultDefensePoints += 10;
+        super("Voleur", 0, -5, -5, 20, 10);
     }
 }

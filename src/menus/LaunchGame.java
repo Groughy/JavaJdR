@@ -102,7 +102,7 @@ public class LaunchGame implements CreateCharacter {
                 character.setRace(new Dwarf());
             }
             case "ork", "orc", "o" -> {
-                System.out.println("Tu as choisi d'être un Ork !");
+                System.out.println("Tu as choisi d'être un Orc !");
                 character.setRace(new Ork());
             }
             default -> {
@@ -134,7 +134,6 @@ public class LaunchGame implements CreateCharacter {
                 defineJobCharacter(character);
             }
         }
-        character.setLifePoints(character.getDefaultLifePoints());
         askToCreateEquipment(character, character.getWeapon());
     }
 
@@ -231,13 +230,14 @@ public class LaunchGame implements CreateCharacter {
 
     @Override
     public void showCharacter(Persona character) {
+        character.addBonus(character.getRace(), character.getJob());
         System.out.println("Voici ton personnage :"
                 + "\nNom : " + character.getName()
                 + "\nGenre : " + character.getGender()
                 + "\nClasse : " + character.getJob().getJobName()
                 + "\nRace : " + character.getRace().getRaceName()
                 + "\nTes caractéristiques sont : \n"
-                + character.getJob().getCharacteristics() +
+                + character.getCharacteristics() +
                 "Voici ton équipement : ");
         showInventory(character);
         System.out.print("\nVeux-tu modifier ton personnage ? Oui/Non : ");
@@ -357,8 +357,9 @@ public class LaunchGame implements CreateCharacter {
             }
         }
     }
+
     @Override
-    public void askToValidateShield (Persona character, Shield shield) {
+    public void askToValidateShield(Persona character, Shield shield) {
         showItem(character.getShield());
         System.out.print("Veux-tu valider ton bouclier ? Oui/Non : ");
         switch (getAnswer.next().toLowerCase()) {

@@ -81,6 +81,20 @@ public class Persona extends ChoicePersona{
 
     public void setJob(Job job) {
         this.job = job;
+
+    }
+
+    public void addBonus(Race race, Job job) {
+        this.defaultLifePoints += race.getLifePoints()+job.getLifePoints();
+        this.defaultStrengthPoints += race.getStrengthPoints()+job.getStrengthPoints();
+        this.defaultMagicPoints += race.getMagicPoints()+job.getMagicPoints();
+        this.defaultAgilityPoints += race.getAgilityPoints()+job.getAgilityPoints();
+        this.defaultDefensePoints += race.getDefensePoints()+job.getDefensePoints();
+        this.lifePoints = this.defaultLifePoints;
+        this.strengthPoints = this.defaultStrengthPoints;
+        this.magicPoints = this.defaultMagicPoints;
+        this.agilityPoints = this.defaultAgilityPoints;
+        this.defensePoints = this.defaultDefensePoints;
     }
 
     public String getGender() {
@@ -128,7 +142,7 @@ public class Persona extends ChoicePersona{
     }
 
     public int getStrengthPoints() {
-        return strengthPoints + defaultStrengthPoints;
+        return strengthPoints;
     }
 
     public void setStrengthPoints(int strengthPoints) {
@@ -136,7 +150,7 @@ public class Persona extends ChoicePersona{
     }
 
     public int getMagicPoints() {
-        return magicPoints + defaultMagicPoints;
+        return magicPoints;
     }
 
     public void setMagicPoints(int magicPoints) {
@@ -144,7 +158,7 @@ public class Persona extends ChoicePersona{
     }
 
     public int getAgilityPoints() {
-        return agilityPoints + defaultAgilityPoints;
+        return agilityPoints;
     }
 
     public void setAgilityPoints(int agilityPoints) {
@@ -152,7 +166,7 @@ public class Persona extends ChoicePersona{
     }
 
     public int getDefensePoints() {
-        return defensePoints + defaultDefensePoints;
+        return defensePoints;
     }
 
     public void setDefensePoints(int defensePoints) {
@@ -181,6 +195,18 @@ public class Persona extends ChoicePersona{
 
     public void setShield(Shield shield) {
         this.shield = shield;
+    }
+
+    public void setDefaultMagicPoints(int defaultMagicPoints) {
+        this.defaultMagicPoints = defaultMagicPoints;
+    }
+
+    public void setDefaultAgilityPoints(int defaultAgilityPoints) {
+        this.defaultAgilityPoints = defaultAgilityPoints;
+    }
+
+    public void setDefaultDefensePoints(int defaultDefensePoints) {
+        this.defaultDefensePoints = defaultDefensePoints;
     }
 
     public void attack(Persona character, Enemy enemy) {
@@ -229,5 +255,12 @@ public class Persona extends ChoicePersona{
                 System.out.println("Erreur !");
                 break;
         }
+    }
+    public String getCharacteristics() {
+        return  "Life Points: " + getLifePoints() + "\n" +
+                "Strength Points: " + getStrengthPoints() + "\n" +
+                "Magic Points: " + getMagicPoints() + "\n" +
+                "Agility Points: " + getAgilityPoints() + "\n" +
+                "Defense Points: " + getDefensePoints() + "\n";
     }
 }

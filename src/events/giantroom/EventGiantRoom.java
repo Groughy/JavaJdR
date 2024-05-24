@@ -14,6 +14,7 @@ public class EventGiantRoom extends Event implements Search, ChooseMenu {
     @Override
     public void searchRoom(Persona character) {
         System.out.println("En regardant autour de vous, il s'agirait d'une pièce à coucher. Entre le miroir, le lit et la commode, tout semble croire que la pièce est habitée. Vous pouvez regarder dans \n1. Le lit \n2. La commode \n3. Le mirroir");
+        chooseMenu(character);
     }
 
     @Override

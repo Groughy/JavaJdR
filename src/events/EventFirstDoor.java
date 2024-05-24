@@ -12,7 +12,7 @@ public class EventFirstDoor extends Event implements ChooseMenu {
 
     @Override
     public void chooseMenu(Persona character) {
-        switch (getAnswer.nextLine()){
+        switch (getAnswer.nextLine()) {
             case "1" -> {
                 System.out.print("Tu ouvres la porte et découvres un gros loup dévorant une proie. Certainement un autre aventurier malchanceux. Il lâche son repas et grogne dans ta direction. Tu n'as plus le choix, tu dois combattre.");
                 new EventFightWolfRoom(character);
@@ -21,7 +21,10 @@ public class EventFirstDoor extends Event implements ChooseMenu {
                 System.out.print("Tu décides de rebrousser chemin. Tu retournes sur tes pas et prends le chemin de droite.");
                 new EventSeparatedPath(character);
             }
-            default -> System.out.print("Il faut choisir");
+            default -> {
+                System.out.print("Il faut choisir");
+                chooseMenu(character);
+            }
         }
 
     }
