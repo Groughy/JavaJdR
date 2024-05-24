@@ -5,22 +5,23 @@ import heroes.Persona;
 import heroes.actions.ChooseMenu;
 import menus.dices.Dice100;
 
-public class EventOrkSleeping extends Event implements ChooseMenu {
+public class EventLookBed extends Event implements ChooseMenu {
 
-    public EventOrkSleeping(Persona character) {
+    public EventLookBed(Persona character) {
         super("Un orc semble dormir dans le lit. Que faites-vous ? \n1. Vous le réveillez. \n2. Vous l'assassinez dans son sommeil. \n3. Vous regardez ailleurs et le laissez dormir.");
+        chooseMenu(character);
     }
 
     @Override
     public void chooseMenu(Persona character) {
-        switch(getAnswer.nextLine()){
+        switch (getAnswer.nextLine()) {
             case "1":
                 new EventTalkWithOrk(character);
                 break;
             case "2":
                 System.out.println("Vous tentez de tuer l'orc.");
                 Dice100 dice = new Dice100();
-                if(dice.roll() < character.getStrengthPoints() + 10){
+                if (dice.roll() < character.getStrengthPoints() + 10) {
                     System.out.println("Vous avez réussi à tuer l'orc dans son sommeil.");
                     new EventOrkDead(character);
                 } else {

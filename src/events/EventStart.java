@@ -25,6 +25,7 @@ public class EventStart extends Event implements ChooseMenu {
                 break;
             default :
                 System.out.println("Je n'ai pas compris ta réponse.");
+                chooseMenu(character);
         }
 
     }

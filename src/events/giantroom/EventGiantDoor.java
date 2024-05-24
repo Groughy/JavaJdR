@@ -9,7 +9,6 @@ public class EventGiantDoor extends Event implements ChooseMenu {
     public EventGiantDoor(Persona character) {
         super("Une porte gigantesque se présente devant vous. Elle doit facilement faire entre deux et trois fois votre taille. Pourtant la pognée et à votre hauteur. Allez vous ? \n1. Ouvrir la porte ? \n2. Regarder l'autre porte ?");
         chooseMenu(character);
-
     }
 
     @Override

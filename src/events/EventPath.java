@@ -21,8 +21,7 @@ public class EventPath extends Event implements ChooseMenu {
                 int trapRoll = trap.roll();
                 if (trapRoll - 15 < character.getAgilityPoints()) {
                     System.out.println("Vous esquivez une lance prête à vous planter, qui sortait du mur.");
-                }
-                else{
+                } else {
                     System.out.println("Vous vous prenez la lance en pleine poitrine.");
                     character.setLifePoints(character.getLifePoints() - 10);
                     if (character.getLifePoints() <= 0) {
@@ -32,22 +31,22 @@ public class EventPath extends Event implements ChooseMenu {
                 }
             }
         }
-        System.out.println("Vous arrivez au bout du couloir. Il y a deux portes devant vous, \n1. une très grand \n2.une plus petite. Laquelle choisissez-vous ?");
+        System.out.println("Vous arrivez au bout du couloir. Il y a deux portes devant vous, Laquelle choisissez-vous ? \n1.Une très grande. \n2.Une plus petite.");
         chooseMenu(character);
     }
 
     @Override
     public void chooseMenu(Persona character) {
-switch (getAnswer.nextInt()) {
-        case 1:
-            new EventGiantDoor(character);
-            break;
-        case 2:
-            new EventSmallDoor(character);
-            break;
-        default:
-            System.out.println("Choix invalide.");
-            break;
-    }
+        switch (getAnswer.nextInt()) {
+            case 1:
+                new EventGiantDoor(character);
+                break;
+            case 2:
+                new EventSmallDoor(character);
+                break;
+            default:
+                System.out.println("Choix invalide.");
+                break;
+        }
     }
 }

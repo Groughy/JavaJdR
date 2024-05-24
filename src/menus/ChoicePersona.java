@@ -16,6 +16,78 @@ public abstract class ChoicePersona {
     private boolean talkedToOrk4 = false;
     private boolean talkedToOrk5 = false;
     private boolean talkedToOrk6 = false;
+    private boolean hasBattleAxe = false;
+    private boolean hasCollarOrk = false;
+    private boolean hasAmulet = false;
+    private boolean hasLittleKey = false;
+    private boolean openedSecondDrawer = false;
+    private boolean killedDragon = false;
+    private boolean petDragon = false;
+    private boolean tookDamageFromMirror = false;
+
+    public boolean isTookDamageFromMirror() {
+        return tookDamageFromMirror;
+    }
+
+    public void setTookDamageFromMirror(boolean tookDamageFromMirror) {
+        this.tookDamageFromMirror = tookDamageFromMirror;
+    }
+
+    public boolean isKilledDragon() {
+        return killedDragon;
+    }
+
+    public void setKilledDragon(boolean killedDragon) {
+        this.killedDragon = killedDragon;
+    }
+
+    public boolean isPetDragon() {
+        return petDragon;
+    }
+
+    public void setPetDragon(boolean petDragon) {
+        this.petDragon = petDragon;
+    }
+
+    public boolean isOpenedSecondDrawer() {
+        return openedSecondDrawer;
+    }
+
+    public void setOpenedSecondDrawer(boolean openedSecondDrawer) {
+        this.openedSecondDrawer = openedSecondDrawer;
+    }
+
+    public boolean isHasLittleKey() {
+        return hasLittleKey;
+    }
+
+    public void setHasLittleKey(boolean hasLittleKey) {
+        this.hasLittleKey = hasLittleKey;
+    }
+
+    public boolean isHasAmulet() {
+        return hasAmulet;
+    }
+
+    public void setHasAmulet(boolean hasAmulet) {
+        this.hasAmulet = hasAmulet;
+    }
+
+    public boolean isHasBattleAxe() {
+        return hasBattleAxe;
+    }
+
+    public void setHasBattleAxe(boolean hasBattleAxe) {
+        this.hasBattleAxe = hasBattleAxe;
+    }
+
+    public boolean isHasCollarOrk() {
+        return hasCollarOrk;
+    }
+
+    public void setHasCollarOrk(boolean hasCollarOrk) {
+        this.hasCollarOrk = hasCollarOrk;
+    }
 
     public boolean isKilledOrk() {
         return killedOrk;

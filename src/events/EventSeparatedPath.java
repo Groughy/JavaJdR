@@ -18,9 +18,12 @@ public class EventSeparatedPath extends Event implements ChooseMenu {
             }
             case "2" -> {
                 System.out.print("Tu décides de prendre le chemin de droite. Tu t'avances prudemment, la lumière est faible. Tu continues d'avancer et découvres une sortie. Tu es libre !");
-                new EventFinale();
+                new EventPath(character);
             }
-            default -> System.out.print("Il faut choisir");
+            default -> {
+                System.out.print("Il faut choisir");
+                chooseMenu(character);
+            }
         }
 
     }
